@@ -1,0 +1,5 @@
+package com.cloudwick.java.collections;
+
+public class UserComparator {
+
+}

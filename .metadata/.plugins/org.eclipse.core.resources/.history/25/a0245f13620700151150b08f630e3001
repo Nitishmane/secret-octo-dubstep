@@ -1,0 +1,121 @@
+package Hadoop1.Hadoop1;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Properties;
+
+import javax.print.DocFlavor.URL;
+
+import org.omg.CORBA.portable.InputStream;
+
+import com.mysql.jdbc.Statement;
+
+//import com.mysql.jdbc.PreparedStatement;
+import com.mysql.jdbc.Statement;
+
+public class App extends Object
+{
+	
+
+    private static final String TheClassName = null;
+
+	public static void main( String[] args ) throws SQLException
+    { /*
+
+    	System.out.println("-------- MySQL JDBC Connection Testing ------------");
+     
+    	try {
+    		Class.forName("com.mysql.jdbc.Driver");
+    	} catch (ClassNotFoundException e) {
+    		System.out.println("Where is your MySQL JDBC Driver?");
+    		e.printStackTrace();
+    		return;
+    	}
+     
+    	System.out.println("MySQL JDBC Driver Registered!");
+    	Connection connection = null;
+    	//connection = DriverManager.
+    	try {
+    		connection = DriverManager
+    		.getConnection("jdbc:mysql://localhost:3306/Hadoo1","root", "");
+     
+    	} catch (SQLException e) {
+    		System.out.println("Connection Failed! Check output console");
+    		e.printStackTrace();
+    		return;
+    	}
+     
+    	if (connection != null) {
+    		System.out.println("You made it, take control your database now!");
+    	} else {
+    		System.out.println("Failed to make connection!");
+    	}
+    	Statement st = (Statement) connection.createStatement();
+    	ResultSet rt = st.executeQuery("select * from Person"); 
+    	System.out.println(rt.toString());
+    	*/
+		String fileName = "/Users/nitishmane/Documents/workspace/Hadoop1/src/db.properties.txt";
+		InputStream propertyFile = null;
+		Properties properties = new Properties();
+		    
+		try
+		{
+		   ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+		   java.net.URL propertyFileUrl = classLoader.getResource(fileName);
+		   if (propertyFileUrl != null)
+		   {
+		      propertyFile = (InputStream) propertyFileUrl.openStream();
+		            
+		      if (propertyFile != null)
+		      {
+		         if (fileName.toUpperCase().endsWith(".XML"))
+		         {
+		              properties.loadFromXML(propertyFile);
+		         }
+		         else
+		         {
+		            properties.load(propertyFile);
+		         }
+		      }
+		      else
+		      {
+		         System.err.println("The property file [" + fileName + "] could not " +   
+		                            "be opened for reading.");
+		      }
+		   }
+		   else
+		   {
+		      System.err.println("The property file [" + fileName + "] could not " +   
+		                         "be found in the classpath.");
+		      }
+		}
+		catch (IOException e)
+		{
+		   System.err.println ("The property file [" + fileName + "] could not " +
+		                  "be loaded. The error is: " + e.toString());
+		}
+		finally
+		{
+		   if (propertyFile != null)
+		   {
+		      try
+		      {
+		         propertyFile.close();
+		      }
+		      catch (IOException e)
+		      {
+		         e.printStackTrace();
+		      } 
+		   }
+		}
+    	
+      }
+    
+    	
+    	
+}
+    
+

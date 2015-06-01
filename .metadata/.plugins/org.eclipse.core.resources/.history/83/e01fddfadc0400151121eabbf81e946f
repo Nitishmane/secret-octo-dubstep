@@ -1,0 +1,21 @@
+package com.cloudwick.java.threads;
+
+public class ThreadManager {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		for (int i = 0; i < 501; i++) {
+			
+			CounterThread obj = new CounterThread(1000000+i);
+			obj.setName("Cloudwick "+i);
+			if (i<50 && i<10) {
+				obj.setPriority(Thread.MIN_PRIORITY);
+			}
+			obj.start();
+			
+		}
+		System.out.println("All threads Done");
+
+	}
+
+}

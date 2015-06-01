@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="src/com/cloudwick/java/exceltocsv/lib/commons-io-2.4-javadoc.jar"/>
+	<classpathentry kind="lib" path="src/com/cloudwick/java/exceltocsv/lib/commons-io-2.4-sources.jar"/>
+	<classpathentry kind="lib" path="src/com/cloudwick/java/exceltocsv/lib/commons-io-2.4-test-sources.jar"/>
+	<classpathentry kind="lib" path="src/com/cloudwick/java/exceltocsv/lib/commons-io-2.4-tests.jar"/>
+	<classpathentry kind="lib" path="src/com/cloudwick/java/exceltocsv/lib/commons-io-2.4.jar"/>
+	<classpathentry kind="lib" path="src/com/cloudwick/java/exceltocsv/lib/dom4j-1.1.jar"/>
+	<classpathentry kind="lib" path="src/com/cloudwick/java/exceltocsv/lib/jdom-1.1.3.jar"/>
+	<classpathentry kind="lib" path="src/com/cloudwick/java/exceltocsv/lib/poi-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="src/com/cloudwick/java/exceltocsv/lib/poi-3.8-beta1-20110307.jar"/>
+	<classpathentry kind="lib" path="src/com/cloudwick/java/exceltocsv/lib/poi-examples-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="src/com/cloudwick/java/exceltocsv/lib/poi-ooxml-3.9.jar"/>
+	<classpathentry kind="lib" path="src/com/cloudwick/java/exceltocsv/lib/poi-ooxml-schemas-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="src/com/cloudwick/java/exceltocsv/lib/xmlbeans-2.3.0.jar"/>
+	<classpathentry kind="lib" path="src/com/cloudwick/java/exceltocsv/lib/poi-3.9-20121203.jar"/>
+	<classpathentry kind="lib" path="src/com/cloudwick/java/exceltocsv/lib/poi-examples-3.9-20121203.jar"/>
+	<classpathentry kind="lib" path="src/com/cloudwick/java/exceltocsv/lib/poi-excelant-3.9-20121203.jar"/>
+	<classpathentry kind="lib" path="src/com/cloudwick/java/exceltocsv/lib/poi-ooxml-3.9-20121203.jar"/>
+	<classpathentry kind="lib" path="src/com/cloudwick/java/exceltocsv/lib/poi-ooxml-schemas-3.9-20121203.jar"/>
+	<classpathentry kind="lib" path="src/com/cloudwick/java/exceltocsv/lib/poi-scratchpad-3.9-20121203.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

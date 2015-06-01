@@ -1,0 +1,22 @@
+package com.cloudwick.java.threads;
+
+import java.util.concurrent.Callable;
+
+public class CounterCallableThread implements Callable<Long> {
+
+	private int counter;
+	public CounterCallableThread(int num)
+	{
+		this.counter = num;
+		
+	}	
+	@Override
+	public Long call() throws Exception {
+		// TODO Auto-generated method stub
+		Long sum;
+		sum = (long) ((counter*(counter+1))/2);
+		System.out.println(Thread.currentThread()+ "value is : " + sum);
+		return sum;
+	}
+}
+	

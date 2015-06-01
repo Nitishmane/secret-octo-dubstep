@@ -1,0 +1,25 @@
+package com.cloudwick.java.exceltocsv;
+import java.io.File;
+import java.io.FilenameFilter;
+import java.io.IOException;
+import java.util.List;
+
+import org.apache.commons.io.FileUtils; 
+
+public class FileListingVisitor {
+ 
+		public static void main(String[] args) throws IOException {
+
+			File dir = new File("dir");
+			String[] extensions = new String[] { "txt", "jsp" };
+			System.out.println("Getting all .txt and .jsp files in " + dir.getCanonicalPath()
+					+ " including those in subdirectories");
+			List<File> files = (List<File>) FileUtils.listFiles(dir, extensions, true);
+			for (File file : files) {
+				System.out.println("file: " + file.getCanonicalPath());
+			}
+
+		}
+
+}
+ 

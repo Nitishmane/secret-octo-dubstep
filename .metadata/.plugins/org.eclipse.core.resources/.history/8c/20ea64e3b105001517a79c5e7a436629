@@ -1,0 +1,45 @@
+package com.cloudwick.java.collections;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+
+public class SortingManager {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		List UserList = new ArrayList();
+		
+		UserCollection obj1 = new UserCollection();
+		obj1.setSsn(55543);
+		obj1.setName("Nitish");
+		
+		UserCollection obj2 = new UserCollection();
+		obj2.setSsn(55534);
+		obj2.setName("mane");
+		
+		UserCollection obj3 = new UserCollection();
+		obj3.setSsn(5534);
+		obj3.setName("charu");
+		
+		UserCollection obj4 = new UserCollection();
+		obj4.setSsn(543);
+		obj4.setName("ramp");
+		
+		UserList.add(obj1);
+		UserList.add(obj2);
+		UserList.add(obj3);
+		UserList.add(obj4);
+		
+		Collections.sort(UserList);
+		for (Object b : UserList) {
+			UserCollection u = (UserCollection) b;
+			System.out.println(u.getSsn());
+	
+		}
+		
+	}
+
+}

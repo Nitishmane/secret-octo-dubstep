@@ -1,0 +1,5 @@
+username=${db.username}
+password=${db.password}
+url=${db.url}
+dialect=${db.dialect}
+driver=${db.driver}

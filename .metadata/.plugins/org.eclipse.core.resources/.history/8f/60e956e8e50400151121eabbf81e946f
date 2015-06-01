@@ -1,0 +1,17 @@
+package com.cloudwick.java.threads;
+
+public class CounterCallableThread extends Thread {
+
+	private int counter;
+	public CounterCallableThread(int num)
+	{
+		this.counter = num;
+		
+	}
+	public void run()
+	{
+		int sum = (counter*(counter+1))/2;
+		System.out.println(Thread.currentThread()+ "value is : " + sum); 
+	}
+}
+	

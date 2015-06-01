@@ -1,0 +1,53 @@
+import java.io.FileInputStream;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Date;
+import java.util.Properties;
+
+import org.omg.CORBA.portable.InputStream;
+
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.Statement;
+
+
+public class App {
+
+	public static void main(String[] args) throws SQLException {
+		// TODO Auto-generated method stub
+		Properties prop = new Properties();
+		FileInputStream in = null;
+		try {
+			in = new FileInputStream("/Users/nitishmane/Documents/workspace/Hadoop1/target/classes.db.properties");
+			prop.load(in);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		String username = prop.getProperty("db.username");
+		String url = prop.getProperty("db.url");
+		String driver = prop.getProperty("db.driver");
+		String password = prop.getProperty("db.password");
+		
+		Connection con = (Connection) DriverManager.getConnection(url,username,password);
+		 String query = "SELECT * FROM Person";
+		 Statement st = (Statement) con.createStatement();	      
+	      ResultSet rs = st.executeQuery(query);
+	      
+	      while (rs.next())
+	      {
+	        int id = rs.getInt("PersonId");
+	        String firstName = rs.getString("FirstName");
+	        String lastName = rs.getString("LastName");
+	        String address = rs.getString("Address");
+	        //String lastName = rs.getString("City");
+	        Date dateCreated = rs.getDate("date_created");	     	         
+	        // print the results
+	        System.out.format("%s, %s, %s, %s, %s, %s\n", id, firstName, lastName, dateCreated);
+	      }
+	      st.close();
+	    }
+	    
+		 
+	
+	
+}
